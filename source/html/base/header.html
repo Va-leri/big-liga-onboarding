@@ -1,6 +1,21 @@
-<header class="header @@if (context.mod) { header--@@mod }">
+<header class="header @@if (context.mod) { header--@@mod } nojs">
   <div class="header__wrapper">
-    <a class="header__logo" @@if (!context.main) { href="index.html"} aria-label="Переход на главную">
-    </a>
+    <div class="header__block-wrapper">
+      <a class="header__logo" @@if (!context.main) { href="index.html" } aria-label="Переход на главную">
+        <img src="../img/svg/logo-header.svg" alt="Лига А. Логотип">
+      </a>
+      <button class="header__menu-btn" type="button">
+        <span class="visually-hidden">Меню</span>
+      </button>
+    </div>
+    <nav class="header__menu main-menu">
+      <ul class="main-menu__list">
+        <li class="main-menu__item"><a class="main-menu__link" href="">О нас</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="">Цены</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="">Критерии качества</a></li>
+        <li class="main-menu__item"><a class="main-menu__link main-menu__link--external" href="">Тестирование</a></li>
+        <li class="main-menu__item"><a class="main-menu__link main-menu__link--external" href="">Блог</a></li>
+      </ul>
+    </nav>
   </div>
 </header>

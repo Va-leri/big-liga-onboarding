@@ -1,0 +1,46 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 100px;
+  background-color: $color-default-white;
+
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.loader__logo {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  margin: auto;
+  margin-left: -275px;
+  display: block;
+  width: 550px;
+  height: auto;
+  opacity: 0;
+  transform: translateY(200px);
+  transition: all 0.8s ease 0s;
+
+  &.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loader__prompt {
+  margin: 0;
+  font-size: 24px;
+  line-height: 22px;
+  font-weight: 400;
+}

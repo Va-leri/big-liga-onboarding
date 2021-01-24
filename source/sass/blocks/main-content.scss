@@ -1,0 +1,11 @@
+.main-content {
+  &.nojs {
+    .main-content__loader {
+      display: none;
+    }
+
+    .main-content__intro {
+      flex-wrap: wrap;
+    }
+  }
+}
